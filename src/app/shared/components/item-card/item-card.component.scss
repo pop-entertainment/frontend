@@ -1,0 +1,60 @@
+.item-card {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 18px;
+  border-radius: 20px;
+  background: #fafafa;
+  gap: 16px;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  .image-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      width: 234px;
+      height: 234px;
+      object-fit: fill;
+    }
+  }
+
+  .info {
+    text-align: left;
+
+    .price {
+      margin: 0;
+      color: black;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 171%;
+    }
+
+    .name {
+      margin: 0;
+      color: black;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 171%;
+    }
+  }
+
+  // Адаптивность для мобильной версии
+  @media (width <= 768px) {
+    .item-card {
+      gap: 24px;
+    }
+
+    .image-container {
+      img {
+        width: 292px;
+        height: 292px;
+      }
+    }
+  }
+}
