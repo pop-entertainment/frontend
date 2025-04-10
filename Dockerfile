@@ -1,4 +1,4 @@
-FROM node:18.18-alpine AS build
+FROM node:18.19.1-alpine AS build
 WORKDIR /app
 COPY . .
 RUN npm ci
