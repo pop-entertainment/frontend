@@ -1,0 +1,31 @@
+/* stylelint-disable selector-pseudo-element-no-unknown */
+::ng-deep .owl-carousel {
+  position: relative !important;
+  box-sizing: border-box;
+  padding: 0 64px;
+}
+
+::ng-deep .owl-nav {
+  position: absolute !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  inset: 0 !important;
+}
+
+::ng-deep .owl-prev,
+::ng-deep .owl-next {
+  background: none !important;
+  color: black !important;
+  font-size: 36px !important;
+}
+
+@media (width <= 1024px) {
+  ::ng-deep .owl-carousel {
+    padding: 0;
+  }
+
+  ::ng-deep .owl-nav {
+    display: none !important;
+  }
+}

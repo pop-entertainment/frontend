@@ -1,4 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'assets/bootstrap-variables' as *;
+@use 'bootstrap/scss/bootstrap-grid' with (
+  $enable-negative-margins: $enable-negative-margins,
+  $grid-breakpoints: $grid-breakpoints,
+  $container-max-widths: $container-max-widths,
+  $grid-gutter-width: $grid-gutter-width,
+  $spacer: $spacer
+);
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 html {
   font-family:
@@ -15,5 +24,19 @@ html {
     sans-serif;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 171%;
+}

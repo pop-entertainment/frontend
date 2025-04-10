@@ -1,0 +1,19 @@
+.story-card {
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #adaaaa;
+  border-radius: 20px;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (width <= 1024px) {
+  .story-card {
+    width: 80px;
+    height: 80px;
+  }
+}
