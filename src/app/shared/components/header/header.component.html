@@ -1,7 +1,7 @@
-<header class="header">
-  <div class="container">
+<header class="header container-md container-fluid">
+  <div class="content-container">
     <div class="logo">
-      <img src="assets/logo.png" alt="Логотип Кэрэ" />
+      <img src="assets/icons/logo.png" alt="Логотип Кэрэ" />
     </div>
 
     <nav class="nav-menu" [ngClass]="{ open: isMenuOpen }">
@@ -13,12 +13,18 @@
     </nav>
 
     <div class="icons">
-      <a href="#"><img src="./assets/search-icon.png" alt="Поиск" /></a>
-      <a href="#"><img src="./assets/cart-icon.png" alt="Корзина" /></a>
-      <a href="#"><img src="./assets/profile-icon.png" alt="Профиль" /></a>
+      <a href="#"
+        ><img src="./assets/icons/header/search-icon.png" alt="Поиск"
+      /></a>
+      <a href="#"
+        ><img src="./assets/icons/header/cart-icon.png" alt="Корзина"
+      /></a>
+      <a href="#"
+        ><img src="./assets/icons/header/profile-icon.png" alt="Профиль"
+      /></a>
       <a href="#"
         ><img
-          src="./assets/menu-icon.png"
+          src="./assets/icons/header/menu-icon.png"
           alt="Menu"
           class="menu-icon"
           (click)="toggleMenu()"
