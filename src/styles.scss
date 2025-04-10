@@ -1,5 +1,5 @@
 @use 'assets/bootstrap-variables' as *;
-@use 'bootstrap/scss/bootstrap-grid' with (
+@use 'bootstrap/scss/bootstrap' with (
   $enable-negative-margins: $enable-negative-margins,
   $grid-breakpoints: $grid-breakpoints,
   $container-max-widths: $container-max-widths,
