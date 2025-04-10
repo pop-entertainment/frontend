@@ -1,4 +1,4 @@
-<div class="item-card">
+<a class="item-card" [routerLink]="['/product']">
   <div class="image-container">
     <img [src]="item.image" [alt]="item.name" />
   </div>
@@ -6,4 +6,4 @@
     <p class="price">{{ item.price }} ₽</p>
     <p class="name">{{ item.name }}</p>
   </div>
-</div>
+</a>
