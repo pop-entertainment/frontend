@@ -1,5 +1,14 @@
-<div class="items-container">
-  <app-item-card [item]="item"></app-item-card>
-  <app-item-card [item]="item"></app-item-card>
-  <app-item-card [item]="item"></app-item-card>
+<div class="container-md g-0 container-fluid">
+  <app-section-header [title]="'Новости'"></app-section-header>
+  <app-story-carousel></app-story-carousel>
+  <app-section-header
+    class="d-block mt-4"
+    [title]="'Популярные товары'"
+  ></app-section-header>
+  <app-popular-goods></app-popular-goods>
+  <app-section-header
+    class="d-block mt-4"
+    [title]="'Каталог'"
+  ></app-section-header>
+  <app-goods-catalog></app-goods-catalog>
 </div>
