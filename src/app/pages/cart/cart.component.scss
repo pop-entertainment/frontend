@@ -1,0 +1,26 @@
+.cart-item {
+  display: flex;
+  box-sizing: border-box;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: #fafafa;
+  gap: 24px;
+
+  &__block {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
