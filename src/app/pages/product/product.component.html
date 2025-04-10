@@ -1,38 +1,36 @@
-<div class="product-page-wrapper">
-  <div class="product-page">
-    <a class="back-button" href="/">
-      <button mat-icon-button color="black">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M14 18L8 12L14 6L15.4 7.4L10.8 12L15.4 16.6L14 18Z"
-            fill="black"
-          />
-        </svg>
-      </button>
-      Назад
-    </a>
+<div class="container">
+  <a class="back-button" [routerLink]="['/']">
+    <button mat-icon-button color="black">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14 18L8 12L14 6L15.4 7.4L10.8 12L15.4 16.6L14 18Z"
+          fill="black"
+        />
+      </svg>
+    </button>
+    Назад
+  </a>
 
-    <div class="product-card">
-      <img
-        src="assets/example/beads.png"
-        alt="Image"
-        class="product-card__image"
-      />
-      <div class="product-card__info">
-        <p>Бисер японский</p>
-        <p>120$</p>
-        <p>
-          Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum
-          dolor Lorem ipsum dolor
-        </p>
-        <button mat-button>Добавить в корзину</button>
-      </div>
+  <div class="product-card">
+    <img
+      src="assets/example/beads.png"
+      alt="Image"
+      class="product-card__image"
+    />
+    <div class="product-card__info">
+      <p>Бисер японский</p>
+      <p>120$</p>
+      <p>
+        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+        Lorem ipsum dolor
+      </p>
+      <button mat-button>Добавить в корзину</button>
     </div>
   </div>
 </div>
