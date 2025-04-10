@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 export type ItemCardModel = { image: string; price: number; name: string };
 
 @Component({
   selector: 'app-item-card',
-  imports: [],
+  imports: [CommonModule, RouterModule],
   templateUrl: './item-card.component.html',
   styleUrl: './item-card.component.scss'
 })
