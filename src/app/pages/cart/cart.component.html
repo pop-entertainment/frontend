@@ -1,0 +1,26 @@
+<div class="container">
+  <app-back-button></app-back-button>
+
+  <div class="cart-items">
+    @for (product of products; track $index) {
+      <div class="cart-item">
+        <img [src]="product.image" alt="Картинка" />
+        <div class="cart-item__block">
+          <div class="cart-item__info">
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.price }} ₽</p>
+            <p>1 шт.</p>
+          </div>
+          <div class="cart-item__actions">
+            <button mat-flat-button>Добавить еще</button>
+            <button mat-flat-button>Удалить</button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <button mat-flat-button style="width: 100%; margin-top: 24px">
+    Заказать
+  </button>
+</div>
