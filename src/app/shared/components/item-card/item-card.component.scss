@@ -16,10 +16,10 @@
     display: flex;
     overflow: hidden;
     width: 100%;
+    justify-content: center;
 
     img {
-      width: 234px;
-      height: 234px;
+      max-width: 234px;
       object-fit: fill;
     }
   }
@@ -48,13 +48,6 @@
   @media (width <= 768px) {
     .item-card {
       gap: 24px;
-    }
-
-    .image-container {
-      img {
-        width: 292px;
-        height: 292px;
-      }
     }
   }
 }
