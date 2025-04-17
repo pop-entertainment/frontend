@@ -1,3 +1,4 @@
+@use '@angular/material' as mat;
 @use 'assets/bootstrap-variables' as *;
 @use 'bootstrap/scss/bootstrap' with (
   $enable-negative-margins: $enable-negative-margins,
@@ -39,4 +40,13 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 171%;
+}
+
+:root {
+  @include mat.button-overrides(
+    (
+      filled-container-color: #4f378b,
+      filled-label-text-color: white
+    )
+  );
 }

@@ -13,22 +13,24 @@
     </nav>
 
     <div class="icons">
-      <a href="#"
-        ><img src="./assets/icons/header/search-icon.png" alt="Поиск"
-      /></a>
-      <a [routerLink]="['/cart']"
-        ><img src="./assets/icons/header/cart-icon.png" alt="Корзина"
-      /></a>
-      <a href="#"
-        ><img src="./assets/icons/header/profile-icon.png" alt="Профиль"
-      /></a>
-      <a href="#"
-        ><img
+      <a href="#">
+        <img src="./assets/icons/header/search-icon.png" alt="Поиск" />
+      </a>
+      <a [routerLink]="['/cart']" class="cart-link">
+        <img src="./assets/icons/header/cart-icon.png" alt="Корзина" />
+        <div class="cart-link__indicator">{{ cartStore.items().length }}</div>
+      </a>
+      <a href="#">
+        <img src="./assets/icons/header/profile-icon.png" alt="Профиль" />
+      </a>
+      <a href="#">
+        <img
           src="./assets/icons/header/menu-icon.png"
           alt="Menu"
           class="menu-icon"
           (click)="toggleMenu()"
-      /></a>
+        />
+      </a>
     </div>
   </div>
 </header>

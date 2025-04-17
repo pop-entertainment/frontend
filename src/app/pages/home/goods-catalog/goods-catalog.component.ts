@@ -1,25 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  ItemCardModel,
-  ItemCardComponent
-} from '../../../shared/components/item-card/item-card.component';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { ProductCardComponent } from '../../../shared/components/product-card/product-card.component';
+import { StoreService } from '../../../services';
 
 @Component({
   selector: 'app-goods-catalog',
-  imports: [ItemCardComponent],
+  imports: [CommonModule, ProductCardComponent],
   templateUrl: './goods-catalog.component.html',
   styleUrl: './goods-catalog.component.scss'
 })
-export class GoodsCatalogComponent implements OnInit {
-  goods: ItemCardModel[] = [];
+export class GoodsCatalogComponent {
+  private storeService = inject(StoreService);
 
-  ngOnInit(): void {
-    for (let index = 0; index < 23; index++) {
-      this.goods.push({
-        image: './assets/example/beads.png',
-        price: 120,
-        name: 'Бисер японский'
-      });
-    }
-  }
+  products$ = this.storeService.getProducts();
 }
