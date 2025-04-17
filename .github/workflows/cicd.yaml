@@ -8,16 +8,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # Укажите нужную версию Node.js
-          cache: 'npm' # Кэширование npm для ускорения
+          node-version: '18.19.1'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci # Используем npm ci для чистой установки
+        run: npm ci
 
       - name: Run tests
         run: npm run test -- --watch=false --browsers=ChromeHeadless
         env:
-          CI: true # Устанавливаем для корректной работы в CI
+          CI: true
 
   build:
     runs-on: ubuntu-latest
