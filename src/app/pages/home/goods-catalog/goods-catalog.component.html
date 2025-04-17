@@ -1,5 +1,5 @@
 <div class="row g-0 mt-3 row-gap-4">
-  @for (product of products; track $index) {
+  @for (product of products$ | async; track $index) {
     <div class="col-xl-3 col-md-6 col-s-12 gx-4 mb-s-4 mb-xl-0">
       <app-product-card [product]="product"></app-product-card>
     </div>
