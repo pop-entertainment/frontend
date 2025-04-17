@@ -7,13 +7,16 @@
       class="product-card__image"
     />
     <div class="product-card__info">
-      <p>Бисер японский</p>
-      <p>120$</p>
-      <p>
-        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
-        Lorem ipsum dolor
+      <p class="product-card__info-title">
+        {{ productStore.currentProduct()?.title }}
       </p>
-      <button mat-button>Добавить в корзину</button>
+      <p class="product-card__info-price">
+        {{ productStore.currentProduct()?.price }} ₽
+      </p>
+      <p class="product-card__info-description">
+        {{ productStore.currentProduct()?.description }}
+      </p>
+      <button mat-flat-button (click)="addToCart()">Добавить в корзину</button>
     </div>
   </div>
 </div>

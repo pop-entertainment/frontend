@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CartStore } from '../../../stores';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  cartStore = inject(CartStore);
   isMenuOpen = false;
 
   toggleMenu() {
