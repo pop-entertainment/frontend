@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Подтвержение заказа</h2>
+<mat-dialog-content>
+  <p>Пожалуйста, введи номер для обратной связи</p>
+  <form [formGroup]="form">
+    <mat-form-field style="width: 100%">
+      <mat-label>Номер телефона</mat-label>
+      <input
+        matInput
+        type="tel"
+        inputmode="tel"
+        formControlName="phone"
+        prefix="+7"
+        mask="(000) 000 00 00"
+        placeholder="+7"
+      />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Отменить</button>
+  <button mat-button cdkFocusInitial (click)="onYesClick()">Подтвердить</button>
+</mat-dialog-actions>
